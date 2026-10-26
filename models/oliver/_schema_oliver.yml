@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: oliver_dim_customer
+    description: "Oliver's Customer Dimension"
+    columns:
+      - name: cust_key
+        description: "Surrogate key for customer"
+        tests:
+          - unique
+          - not_null
+  - name: oliver_dim_date
+    description: "Oliver's Date Dimension"
+    columns:
+      - name: date_key
+        description: "Surrogate key for date"
+        tests:
+          - unique
+          - not_null
+  - name: oliver_dim_employee
+    description: "Oliver's Employee Dimension"
+    columns:
+      - name: employee_key
+        description: "Surrogate key for employee"
+        tests:
+          - unique
+          - not_null
+  - name: oliver_dim_product
+    description: "Oliver's Product Dimension"
+    columns:
+      - name: product_key
+        description: "Surrogate key for product"
+        tests:
+          - unique
+          - not_null
+  - name: oliver_dim_store
+    description: "Oliver's Store Dimension"
+    columns:
+      - name: store_key
+        description: "Surrogate key for store"
+        tests:
+          - unique
+          - not_null
+  - name: fact_sales
+    description: "Oliver's Sales Fact (grain: one row per order line)"
+  - name: sales
+    description: "Oliver's Sales semantic layer model for analysts"
