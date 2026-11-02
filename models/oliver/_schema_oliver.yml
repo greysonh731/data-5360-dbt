@@ -45,3 +45,9 @@ models:
     description: "Oliver's Sales Fact (grain: one row per order line)"
   - name: sales
     description: "Oliver's Sales semantic layer model for analysts"
+
+- name: employee_certifications
+description: adapted model for employee certification system$clustering_information
+
+-name: fact_certification
+description: fact table for employee certifications. Tracks specific certificiations done by a given employee on a given date.
